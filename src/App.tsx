@@ -191,8 +191,30 @@ export default function App() {
         ? MOVIES_DATA.filter((m) => m.type === 'movie')
         : MOVIES_DATA;
 
+<<<<<<< HEAD
+    // Filter personalized movies matching at least one preferred genre chosen by the active profile
+    const personalizedMovies = baseMovies.filter((movie) =>
+      movie.genres.some((genre) => currentProfile?.preferredGenres.includes(genre))
+    );
+
     return (
       <div className="pb-24 -mt-12 sm:-mt-20 md:-mt-28 relative z-30 space-y-8 sm:space-y-12">
+        {/* Dynamic Personalized Shelf Row based on profile liked categories selection */}
+        {personalizedMovies.length > 0 && activeTab === 'home' && (
+          <MovieRow
+            title={`Just For ${currentProfile?.name} (Your Liked Genres)`}
+            movies={personalizedMovies}
+            onPlayClick={(m) => handleOpenPlayer(m)}
+            onMoreInfoClick={(m) => setSelectedDetailMovie(m)}
+            onToggleMyList={handleToggleMyList}
+            myListIds={myListIds}
+          />
+        )}
+
+=======
+    return (
+      <div className="pb-24 -mt-12 sm:-mt-20 md:-mt-28 relative z-30 space-y-8 sm:space-y-12">
+>>>>>>> da19bac9cad22ff1e0c11483c21a83dc60156faf
         {CATEGORIES.map((cat) => {
           // Compute category movies array
           const catMovies = baseMovies.filter(cat.filter);

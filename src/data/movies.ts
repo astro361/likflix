@@ -205,6 +205,30 @@ export interface Profile {
   id: string;
   name: string;
   avatarUrl: string;
+<<<<<<< HEAD
+  preferredGenres: string[];
+}
+
+export const SUGGESTED_GENRES = [
+  'Sci-Fi',
+  'Action Thriller',
+  'Cyberpunk',
+  'Space Drama',
+  'Adventure',
+  'Action',
+  'Martial Arts',
+  'Historical Drama',
+  'Mystery',
+  'Sci-Fi Suspense',
+  'Docuseries',
+  'Sports',
+  'Documentary',
+  'Food & Travel',
+  'Thriller',
+  'Crime Drama',
+  'Nature Documentary',
+  'Stand-Up Comedy'
+=======
 }
 
 export const PROFILES: Profile[] = [
@@ -212,6 +236,7 @@ export const PROFILES: Profile[] = [
   { id: 'p2', name: 'Sarah', avatarUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80' },
   { id: 'p3', name: 'Kids', avatarUrl: 'https://images.unsplash.com/photo-1607990283143-e81e7a2c93ab?auto=format&fit=crop&w=150&h=150&q=80' },
   { id: 'p4', name: 'Guest', avatarUrl: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=150&h=150&q=80' }
+>>>>>>> da19bac9cad22ff1e0c11483c21a83dc60156faf
 ];
 
 export const CATEGORIES = [
